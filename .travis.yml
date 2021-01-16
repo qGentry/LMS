@@ -7,5 +7,6 @@ install:
         - pip install pytest-cov
 script:
   - py.test --cov-report=xml --cov=src
+  - pytest --flake8
 after_success:
   - bash <(curl -s https://codecov.io/bash)
